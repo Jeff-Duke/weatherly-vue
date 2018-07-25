@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{this.WeatherData.current_observation.display_location.full}}</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import WeatherData from './WeatherData'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  },
+  data() {
+      return {
+        WeatherData
+      }
+    },
 }
 </script>
 
